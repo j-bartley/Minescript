@@ -3,10 +3,12 @@
 ### Downloading Repo
 ### Prerequisite Downloads/Installs
 1. Installing Python Dependencies
-  All commands in this section are entered directly into Console/Terminal.
-    1. Python
 
-   Check to make sure Python is installed on current OS:
+&nbsp;&nbsp;All commands in this section are entered directly into Console/Terminal.
+
+&nbsp;&nbsp;&nbsp;&nbsp;1. Python
+
+&nbsp;&nbsp;&nbsp;&nbsp;Check to make sure Python is installed on current OS:
 
   `python`
 
