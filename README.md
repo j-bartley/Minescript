@@ -1,16 +1,16 @@
-# Minescript
-## Getting Started
-### Downloading Repo
-### Prerequisite Downloads/Installs
-1. Installing Python Dependencies
+# **Minescript**
+# 1.0 - Getting Started
+## 1.1 - Downloading Repo
+## 1.2 - Prerequisite Downloads/Installs
+### 1.2.0 - Installing Python Dependencies
 
-&nbsp;&nbsp;All commands in this section are entered directly into Console/Terminal.
+   All commands in this section are entered directly into Console/Terminal.
+    
+#### 1.2.1 - Python
 
-&nbsp;&nbsp;&nbsp;&nbsp;1. Python
+   Check to make sure Python is installed on current OS:
 
-&nbsp;&nbsp;&nbsp;&nbsp;Check to make sure Python is installed on current OS:
-
-  `python`
+   `python`
 
    If it is installed you will see this appear:
 
@@ -26,14 +26,14 @@
 
    `exit()`
 
-  1. pip
+#### 1.2.2 - pip
 
   `sudo apt install python-pip`
 
-  1. pyyaml
+#### 1.2.3 - pyyaml
 
   `pip install pyyaml`
 
-  1. pyfiglet
+#### 1.2.4 pyfiglet
 
   `pip install pyfiglet`
