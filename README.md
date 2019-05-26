@@ -6,7 +6,7 @@
 
   All commands in this section are entered directly into Console/Terminal.
 
-  * Python
+  1. Python
 
    Check to make sure Python is installed on current OS:
 
@@ -26,14 +26,14 @@
 
    `exit()`
 
-  * pip
+  1. pip
 
   `sudo apt install python-pip`
 
-  * pyyaml
+  1. pyyaml
 
   `pip install pyyaml`
 
-  * pyfiglet
+  1. pyfiglet
 
   `pip install pyfiglet`
