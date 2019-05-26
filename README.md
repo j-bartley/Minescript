@@ -38,4 +38,3 @@
   4. pyfiglet
 
   `pip install pyfiglet`
-  
