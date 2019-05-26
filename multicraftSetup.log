@@ -1,0 +1,107 @@
+Multicraft Setup Log:
+################################################################################
+*** Welcome to Multicraft!
+################################################################################
+
+This installer will help you get Multicraft up and running.
+No changes are made to the system until all of the required information has been collected.
+
+NOTE: This script automates the installation as described on the Multicraft website. Use it at your own risk.
+
+
+Run each Minecraft server under its own user? (Multicraft will create system users): [y]/n y
+Run Multicraft under this user: [jordan]
+Install Multicraft in: [/home/jordan/multicraft]
+If you have a license key you can enter it now: [no]
+If you control multiple machines from one web panel you need to assign each daemon a unique number (requires a Dynamic or custom license). Daemon number? [1]
+
+
+Will the web panel run on this machine? [y]/n y
+User of the webserver: [www-data]
+Location of the web panel files: [/var/www/multicraft]
+Please enter a new daemon password (use the same password in the last step of the panel installer) [none]
+
+Enable builtin FTP server? [y]/n y
+IP the FTP server will listen on (0.0.0.0 for all IPs): [10.0.2.15]
+FTP server port: [21]
+Block FTP upload of .jar files and other executables (potentially dangerous plugins)? [n]/y y
+
+
+
+MySQL is the recommended database type but it requires you to have a MySQL server available.
+SQLite is more light weight and it will work fine for small installations up to 10 servers.
+For multiple daemons on a single panel MySQL is required.
+
+What kind of database do you want to use? [sqlite]/mysql
+
+The database will be located at: '/home/jordan/multicraft/data/data.db'
+***
+*** Please use the web panel to initialize the database.
+***
+
+
+NOTE: Any running daemon will be stopped!
+Ready to install Multicraft. Start installation? [y]/n y
+
+################################################################################
+*** INSTALLING
+################################################################################
+
+
+Creating directory '/home/jordan/multicraft'... done
+
+Ensuring the home directory exists and is owned and writable by the user... done
+
+Installing 'bin/' to '/home/jordan/multicraft/'... done
+Installing 'jar/' to '/home/jordan/multicraft/'... done
+Installing 'launcher/' to '/home/jordan/multicraft/'... done
+Installing 'scripts/' to '/home/jordan/multicraft/'... done
+Installing 'ssl/' to '/home/jordan/multicraft/'... done
+Installing 'templates/' to '/home/jordan/multicraft/'... done
+Installing 'eula.txt' to '/home/jordan/multicraft/'... done
+Installing 'multicraft.conf.dist' to '/home/jordan/multicraft/'... done
+Installing 'default_server.conf.dist' to '/home/jordan/multicraft/'... done
+Installing 'server_configs.conf.dist' to '/home/jordan/multicraft/'... done
+Cleaning up files... done
+
+Generating 'multicraft.conf'... done
+
+Setting owner of '/home/jordan/multicraft' to 'jordan'... done
+Setting special daemon permissions... chown: changing ownership of '/home/jordan/multicraft/bin/useragent': Operation not permitted
+done
+
+
+Creating directory '/var/www/multicraft'... mkdir: cannot create directory ‘/var/www’: Permission denied
+done
+Installing web panel files from 'panel/' to '/var/www/multicraft'... cp: target '/var/www/multicraft' is not a directory
+cp: cannot create regular file '/var/www/multicraft': No such file or directory
+done
+Setting owner of '/var/www/multicraft' to 'www-data'... chown: cannot access '/var/www/multicraft': No such file or directory
+done
+Setting permissions of '/var/www/multicraft'... chmod: cannot access '/var/www/multicraft': No such file or directory
+done
+
+
+Temporarily starting daemon to set DB permissions:
+Multicraft 2.3.1 - Minecraft Server Manager Daemon
+Loading configuration from /home/jordan/multicraft/multicraft.conf
+Starting daemon
+Failed to open "/home/jordan/multicraft/bin/useragent.conf" for writing, please make sure the daemon is started by the root user
+
+
+################################################################################
+*** Installation complete!
+################################################################################
+
+PLEASE READ:
+
+1) Before starting the daemon you need to run the web panel installer to initialize your database. (example: http://your.address/multicraft/install.php)
+
+2) After running the web panel installer you can start the daemon using the following command:
+   /home/jordan/multicraft/bin/multicraft start
+
+
+For troubleshooting please see:
+- Daemon log file:    /home/jordan/multicraft/multicraft.log
+- Panel log file:     /var/www/multicraft/protected/runtime/application.log
+- Multicraft Website: http://www.multicraft.org/site/docs/troubleshooting
