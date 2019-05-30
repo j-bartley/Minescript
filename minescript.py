@@ -1,8 +1,3 @@
-#Must install modules:
-#   sudo apt install python-pip
-#   pip install pyyaml
-#   pip install pyfiglet
-
 import yaml
 import sys
 import os
@@ -22,12 +17,23 @@ with open("servers.yaml", 'r') as stream:
 print("Servers loaded." + '\n')
 print("Which server would you like to use?" + '\n')
 
+count = 0
+
 for x in servers:
     print(str(x) + '. ' + servers[x]['name'])
+    count = count + 1
 
 print('\n')
 choice = input("Selection Number: ")
 
 #Make a function to make this variable use.
-if choice == 1:
-    print("Selected " + servers[1]['name'] + " to load.")
+if choice >= 0 and choice <= count:
+    print("Selected " + servers[choice]['name'] + " to load.")
+    print("Switching to directory " + servers[choice]['loc'] + " to load.")
+    os.system("konsole -e 'bash -c \"sudo sh " + servers[choice]['loc'] + "ServerStart.sh" + "; exec bash\"'")
+
+
+#choose server
+#check java version
+#--fix java version if not working
+#start server
